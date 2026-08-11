@@ -175,6 +175,7 @@ a { color: inherit; }
   transform: rotate(-3deg);
 }
 .hero-note > p { font-family: Georgia, "Noto Serif KR", serif; font-size: clamp(24px, 3vw, 36px); line-height: 1.45; letter-spacing: -0.04em; }
+.note-line { white-space: nowrap; font-size: 0.88em; }
 .hero-stat { border-top: 1px solid var(--line); padding-top: 22px; }
 .hero-stat strong { display: block; font-family: Georgia, serif; font-size: 58px; line-height: 1; font-weight: 400; }
 .hero-stat span { display: block; margin-top: 8px; color: var(--brown-soft); font-size: 13px; }
