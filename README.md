@@ -2,6 +2,9 @@
 
 네이버 블로그 `그냥하는 캄스영어`의 **엄마표 영어미술놀이** 카테고리를 검색하고 탐색할 수 있는 정적 웹 앱입니다.
 
+- 운영 사이트: <https://kamsartenglish.vercel.app>
+- GitHub: <https://github.com/ljskt2000-stack/kamsARTenglish>
+
 ## 포함된 기능
 
 - 제목·준비물·영어 표현 통합 검색
