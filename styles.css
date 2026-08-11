@@ -65,14 +65,18 @@ a { color: inherit; }
 .brand-mark {
   width: 42px;
   height: 42px;
-  display: grid;
-  place-items: center;
+  flex: 0 0 auto;
   border-radius: 50%;
-  color: var(--cream);
   background: var(--brown);
-  font-family: Georgia, serif;
-  font-size: 22px;
-  font-style: italic;
+  overflow: hidden;
+}
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(2.15);
+  transform-origin: 50% 35%;
 }
 .brand strong { display: block; font-size: 15px; letter-spacing: -0.03em; }
 .brand small { display: block; margin-top: 3px; font-size: 9px; letter-spacing: 0.16em; color: var(--brown-soft); }
