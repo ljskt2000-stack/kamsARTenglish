@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="두 아이에게 직접 해준 캄스 엄마표 영어미술놀이를 주제와 영어 표현으로 찾아보세요.">
+  <meta name="theme-color" content="#fce9e2">
+  <title>캄스 엄마표 영어미술놀이 라이브러리</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23493731'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='36' font-style='italic' fill='%23fff9f5'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://blogthumb.pstatic.net">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#library">콘텐츠로 바로가기</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="캄스 영어미술놀이 홈">
+      <span class="brand-mark" aria-hidden="true">K</span>
+      <span>
+        <strong>그냥하는 캄스영어</strong>
+        <small>ART &amp; ENGLISH LIBRARY</small>
+      </span>
+    </a>
+    <a class="header-link" href="https://blog.naver.com/ljskt" target="_blank" rel="noopener noreferrer">
+      네이버 블로그
+      <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">두 아이에게 직접 해준 영어미술놀이</p>
+        <h1 id="hero-title">영어는<br><em>놀면서 쓱—</em></h1>
+        <p class="hero-description">
+          거창한 준비보다 아이와 주고받는 한마디가 먼저예요.<br>
+          오늘 우리 집에서 해볼 놀이를 천천히 골라보세요.
+        </p>
+        <a class="primary-link" href="#library">놀이 둘러보기 <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-note" aria-label="라이브러리 소개">
+        <span class="note-pin" aria-hidden="true"></span>
+        <p>완벽하게가 아니라,<br><strong>멈추지 않게.</strong></p>
+        <div class="hero-stat">
+          <strong id="total-count">—</strong>
+          <span>가지 놀이 기록</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="library" id="library" aria-labelledby="library-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PLAY LIBRARY</p>
+          <h2 id="library-title">오늘은 뭐 하고 놀까요?</h2>
+        </div>
+        <p>제목과 본문에 실제로 확인된 정보만 담았습니다.</p>
+      </div>
+
+      <div class="filter-panel" aria-label="놀이 검색과 필터">
+        <label class="search-field">
+          <span class="search-icon" aria-hidden="true"></span>
+          <span class="sr-only">놀이 검색</span>
+          <input id="search-input" type="search" placeholder="재료, 주제, 영어 표현으로 검색" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <div class="select-row">
+          <label>
+            <span>연령</span>
+            <select id="age-filter"><option value="">전체 연령</option></select>
+          </label>
+          <label>
+            <span>놀이 유형</span>
+            <select id="type-filter"><option value="">전체 유형</option></select>
+          </label>
+          <label>
+            <span>계절</span>
+            <select id="season-filter"><option value="">모든 계절</option></select>
+          </label>
+          <label>
+            <span>정렬</span>
+            <select id="sort-filter">
+              <option value="newest">최신순</option>
+              <option value="oldest">오래된순</option>
+              <option value="title">가나다순</option>
+            </select>
+          </label>
+        </div>
+        <button class="reset-button" id="reset-button" type="button">필터 초기화</button>
+      </div>
+
+      <div class="results-bar" aria-live="polite">
+        <p><strong id="result-count">0</strong>개의 놀이</p>
+        <div id="active-filters" class="active-filters"></div>
+      </div>
+
+      <div id="loading-state" class="loading-state">
+        <span></span><span></span><span></span>
+        <p>놀이 기록을 펼치는 중이에요</p>
+      </div>
+      <div id="empty-state" class="empty-state" hidden>
+        <span aria-hidden="true">✦</span>
+        <h3>검색 결과가 없어요</h3>
+        <p>표현을 조금 짧게 바꾸거나 필터를 초기화해 보세요.</p>
+        <button type="button" data-reset>전체 놀이 보기</button>
+      </div>
+      <div id="card-grid" class="card-grid"></div>
+      <button id="load-more" class="load-more" type="button" hidden>
+        놀이 더 보기
+        <span aria-hidden="true">＋</span>
+      </button>
+    </section>
+
+    <section class="brand-message" aria-label="캄스 브랜드 메시지">
+      <p>ART + ENGLISH</p>
+      <h2>아이의 언어 감각은<br>미술과 함께 자라납니다.</h2>
+      <span>아이와 함께, 오늘도 그냥 합니다.</span>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>그냥하는 캄스영어</strong>
+      <p>엄마표 영어 · 독서 · 문해력 기록</p>
+    </div>
+    <p>모든 놀이는 원본 네이버 블로그 글로 연결됩니다.</p>
+  </footer>
+
+  <dialog id="post-dialog" class="post-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="상세 보기 닫기">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <template id="card-template">
+    <article class="play-card">
+      <button class="card-button" type="button">
+        <span class="card-image-wrap">
+          <img class="card-image" alt="" loading="lazy">
+          <span class="card-number"></span>
+        </span>
+        <span class="card-content">
+          <span class="card-meta"></span>
+          <strong class="card-title"></strong>
+          <span class="card-summary"></span>
+          <span class="card-keywords"></span>
+          <span class="card-action">자세히 보기 <i aria-hidden="true">↗</i></span>
+        </span>
+      </button>
+    </article>
+  </template>
+</body>
+</html>
