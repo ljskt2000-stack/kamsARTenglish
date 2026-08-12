@@ -75,8 +75,7 @@ a { color: inherit; }
   height: 100%;
   display: block;
   object-fit: cover;
-  transform: scale(2.15);
-  transform-origin: 50% 35%;
+  transform: scale(1.08);
 }
 .brand strong { display: block; font-size: 15px; letter-spacing: -0.03em; }
 .brand small { display: block; margin-top: 3px; font-size: 9px; letter-spacing: 0.16em; color: var(--brown-soft); }
