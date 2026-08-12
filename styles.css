@@ -192,7 +192,7 @@ a { color: inherit; }
   color: #fff;
   background: linear-gradient(transparent, rgba(29, 20, 17, 0.72));
 }
-.hero-note figcaption > p { margin: 0; font-size: 14px; line-height: 1.55; font-weight: 600; letter-spacing: -0.02em; }
+.hero-note figcaption > p { margin: 0; font-size: clamp(16px, 1.5vw, 18px); line-height: 1.5; font-weight: 600; letter-spacing: -0.02em; }
 .hero-stat { display: flex; align-items: baseline; gap: 5px; margin-top: 8px; }
 .hero-stat strong { font-family: Georgia, serif; font-size: 25px; line-height: 1; font-weight: 400; }
 .hero-stat span { font-size: 12px; }
